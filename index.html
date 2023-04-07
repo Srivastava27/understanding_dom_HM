@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>understanding DOM</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Tip calculator</h1>
+        <input type="number" name="" id="" placeholder="enter your bill" class="a">
+        <button class="btn">
+            calculate
+        </button>
+        <p class="res"></p>
+
+
+        <script>
+            let input_box=document.querySelector(".a");
+            let button=document.querySelector(".btn");
+            let ans=document.querySelector(".res");
+
+            button.addEventListener("click",calculateTip)
+
+            function calculateTip(){
+                let val=input_box.value;
+                let tip=(val*2)/100;
+                ans.innerText="tip: "+tip;
+            }
+
+
+        </script>
+
+       
+
+
+    </div>
+</body>
+</html>
